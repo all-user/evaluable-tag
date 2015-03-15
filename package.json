@@ -1,0 +1,27 @@
+{
+  "name": "evaluable-tag",
+  "version": "0.0.1",
+  "description": "The tag has evaluable attribute and it behaves like annotation to next sibling",
+  "main": "index.js",
+  "author": "Keita Okamoto<ok@aaa.email.ne.jp>",
+  "repository": {
+    "type": "git",
+    "url": "https//github.com/all-user/evaluable-tag"
+  },
+  "bugs": {
+    "url": "https//github.com/all-user/evaluable-tag/issues"
+  },
+  "keywords": [
+    "css",
+    "javascript"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "coffee-script": "^1.9.1"
+  },
+  "dependencies": {
+    "append-css": "0.0.2",
+    "extend": "^2.0.0"
+  }
+}
