@@ -1,7 +1,6 @@
 # evaluable-tag
 
 The tag has evaluable attribute and it behaves like annotation to next sibling.
-used in conjuction with the browserify.
 
 ```html
 <body>
