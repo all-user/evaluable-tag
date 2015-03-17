@@ -21,7 +21,7 @@
     "coffee-script": "^1.9.1"
   },
   "dependencies": {
-    "append-css": "0.0.2",
+    "append-css": "^0.1.1",
     "extend": "^2.0.0"
   }
 }
