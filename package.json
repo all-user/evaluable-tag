@@ -1,6 +1,6 @@
 {
   "name": "evaluable-tag",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The tag has evaluable attribute and it behaves like annotation to next sibling",
   "main": "index.js",
   "author": "Keita Okamoto<ok@aaa.email.ne.jp>",
