@@ -4,6 +4,10 @@
   "description": "The tag has evaluable attribute and it behaves like annotation to next sibling",
   "main": "index.js",
   "author": "Keita Okamoto<ok@aaa.email.ne.jp>",
+  "scripts": {
+    "build": "coffee -o ./lib ./src/index.coffee && browserify -r ./lib/index.js:evaluable-tag > ./browser/build.js",
+    "test": "testem ci -P 4"
+  },
   "repository": {
     "type": "git",
     "url": "https//github.com/all-user/evaluable-tag"
@@ -19,7 +23,12 @@
   "private": false,
   "devDependencies": {
     "browserify": "^9.0.3",
-    "coffee-script": "^1.9.1"
+    "coffee-script": "^1.9.1",
+    "espowerify": "^0.10.0",
+    "mocha": "^2.2.4",
+    "phantomjs": "^1.9.16",
+    "power-assert": "^0.10.2",
+    "testem": "^0.8.0-0"
   },
   "dependencies": {
     "append-css": "^0.1.1",
