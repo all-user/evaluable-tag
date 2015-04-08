@@ -6,16 +6,14 @@ hidQueries = []
 _hide = (qs) ->
   appendCSS """
     #{ qs } {
-      width     : 0;
-      height    : 0;
-      visibility:hidden;
+      width      : 0;
+      height     : 0;
+      line-height: 0;
+      visibility : hidden;
     }
   """
 
 _eval = (qs, select) ->
-  if hidQueries.indexOf(qs) is -1
-    hidQueries.push qs
-    _hide(qs)
   tags = document.querySelectorAll qs
   [].map.call tags, (tag) ->
     target = select tag
@@ -25,6 +23,9 @@ _eval = (qs, select) ->
     result    : res
 
 evalAnnotationsBy = (qs) ->
+  if hidQueries.indexOf(qs) is -1
+    hidQueries.push qs
+    _hide(qs)
   _eval qs, (tag) ->
     target = tag.nextSibling
     target = target.nextSibling while target?.nodeType == Node.TEXT_NODE

@@ -8,12 +8,21 @@ describe 'evaluable tag', ->
 
 
   describe 'visibility check', ->
-    it 'ET tag should be hidden', ->
+    it 'ET tag should be visible', ->
       document.body.appendChild div
       div.innerHTML = '''
         <span class="et" data-eval="{}">test 00</span>
       '''
       evaluated = ET.evalBy '.et'
+      assert getComputedStyle(evaluated[0].annotation).lineHeight isnt '0px'
+      assert getComputedStyle(evaluated[0].annotation).visibility is 'visible'
+
+    it 'ET annotation should be hidden', ->
+      document.body.appendChild div
+      div.innerHTML = '''
+        <span class="et" data-eval="{}">test 00</span>
+      '''
+      evaluated = ET.evalAnnotationsBy '.et'
       assert getComputedStyle(evaluated[0].annotation).lineHeight is '0px'
       assert getComputedStyle(evaluated[0].annotation).visibility is 'hidden'
 
