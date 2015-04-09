@@ -56,3 +56,5 @@ console.log(et.result); // 3
 console.log(et.annotation.textContent); // sum
 console.log(et.annotated.textContent); // content
 ```
+
+The `.et-a`element visibility is hidden when calling `evalAnnotationsBy`.
