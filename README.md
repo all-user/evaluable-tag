@@ -21,7 +21,7 @@ npm install evaluable-tag
 
 ### in browserify
 ```javascript
-  var ET = require('evaluable-tag');
+var ET = require('evaluable-tag');
 ```
 
 ## ET#evalBy
