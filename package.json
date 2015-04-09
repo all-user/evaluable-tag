@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Keita Okamoto<ok@aaa.email.ne.jp>",
   "scripts": {
-    "build": "coffee -o ./lib ./src/index.coffee && browserify -r ./lib/index.js:evaluable-tag > ./browser/build.js",
+    "build": "coffee -o ./lib ./src/index.coffee && browserify -r ./lib/index.js:evaluable-tag > ./browser/et.js",
     "test": "testem ci -P 4"
   },
   "repository": {
