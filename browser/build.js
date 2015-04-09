@@ -15,7 +15,9 @@ module.exports = m;
   };
 
   appendCSS = function(rule) {
-    styleEle.sheet.insertRule(rule, 0);
+    var sheet;
+    sheet = styleEle.sheet;
+    sheet.insertRule(rule, sheet.cssRules.length);
     return styleEle;
   };
 
