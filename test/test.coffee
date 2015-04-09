@@ -43,6 +43,7 @@ describe 'evaluable tag', ->
         assert et.annotated.textContent is 'test 01'
       done()
 
+
     it 'eval string', (done) ->
       document.body.appendChild div
       div.innerHTML = '''
@@ -157,6 +158,17 @@ describe 'evaluable tag', ->
         assert et.annotated.textContent is 'test 09'
       done()
 
+    it 'readme example test: evalBy', (done) ->
+      div.innerHTML = '''
+        <span class="et" data-eval="1 + 2">sum</span>
+      '''
+      evaluated = ET.evalBy '.et'
+      et = evaluated[0]
+      assert et.result is 3
+      assert et.annotation.textContent is 'sum'
+      assert et.annotated.textContent is 'sum'
+      done()
+
 
   describe 'eval annotation', ->
 
@@ -183,4 +195,17 @@ describe 'evaluable tag', ->
         assert et.result is 'annotation test'
         assert et.annotation.textContent is 'test 11: annotation'
         assert et.annotated is null
+      done()
+
+    it 'readme example test: evalAnnotationsBy', (done) ->
+      div.innerHTML = '''
+        <span class="et-a" data-eval="1 + 2">sum</span>
+        <div>content</div>
+      '''
+      annotated = ET.evalAnnotationsBy '.et-a'
+
+      et = annotated[0]
+      assert et.result is 3
+      assert et.annotation.textContent is 'sum'
+      assert et.annotated.textContent is 'content'
       done()
