@@ -24,7 +24,7 @@ npm install evaluable-tag
 var ET = require('evaluable-tag');
 ```
 
-## ET#evalBy
+## ET.evalBy
 html
 ```html
 <span class="et" data-eval="1 + 2">sum</span>
@@ -40,7 +40,7 @@ console.log(et.annotation.textContent); // sum
 console.log(et.annotated.textContent); // sum
 ```
 
-## ET#evalAnnotationsBy
+## ET.evalAnnotationsBy
 html
 ```html
 <span class="et-a" data-eval="1 + 2">sum</span>
