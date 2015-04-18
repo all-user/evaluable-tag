@@ -10,6 +10,8 @@ _hide = (qs) ->
       height     : 0;
       line-height: 0;
       visibility : hidden;
+      margin     : 0;
+      padding    : 0;
     }
   """
 
