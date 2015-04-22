@@ -1,6 +1,6 @@
 {
   "name": "evaluable-tag",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "The tag has evaluable attribute and it behaves like annotation to next sibling",
   "main": "index.js",
   "author": "Keita Okamoto<ok@aaa.email.ne.jp>",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https//github.com/all-user/evaluable-tag.git"
+    "url": "https://github.com/all-user/evaluable-tag.git"
   },
   "bugs": {
-    "url": "https//github.com/all-user/evaluable-tag/issues"
+    "url": "https://github.com/all-user/evaluable-tag/issues"
   },
   "keywords": [
     "css",
     "javascript"
   ],
-  "homepage": "https//github.com/all-user/evaluable-tag",
+  "homepage": "https://github.com/all-user/evaluable-tag",
   "license": "MIT",
   "private": false,
   "devDependencies": {
